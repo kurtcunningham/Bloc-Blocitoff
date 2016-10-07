@@ -1,0 +1,65 @@
+<section role="region" class="tasks__container">
+  <!-- Task Header -->
+  <header role="banner" class="tasks__header">
+    <h2 class="tasks__header-date">{{$ctrl.date | date:'dd'}}</h2>
+    <ul class="tasks__header-date-list">
+      <li class="tasks__header-date-item">{{$ctrl.date | date:'MMM.'}}</li>
+      <li class="tasks__header-date-item">{{$ctrl.date | date:'yyyy'}}</li>
+    </ul>
+    <p class="tasks__header-day">{{$ctrl.date | date:'EEEE'}}</p>
+  </header>
+  <!-- Task Body -->
+  <div class="tasks__body">
+    <ul class="tasks__list">
+      <li
+        class="tasks__item"
+        ng-repeat="task in $ctrl.taskList">
+        <p
+          ng-class="{'is-completed': task.isTaskComplete === true}"
+          class="tasks__item-text">{{task.text}}</p>
+        <i
+          class="tasks__item-icon"
+          ng-class="{'is-completed': task.isTaskComplete === true}"
+          ng-click="$ctrl.isTaskComplete(task)"></i>
+      </li>
+    </ul>
+  </div>
+  <!-- Task Footer -->
+  <footer
+    role="footer"
+    class="tasks__footer">
+    <button
+      class="tasks__button"
+      ng-hide="$ctrl.isCreateTaskVisible"
+      ng-click="$ctrl.createTaskVisible($event)">
+      <span class="tasks__button-text">+</span>
+    </button>
+    <!-- Create Task -->
+    <form
+      name="createTask"
+      class="tasks__form"
+      ng-show="$ctrl.isCreateTaskVisible"
+      ng-submit="$ctrl.createTask()">
+      <fieldset>
+        <label>Task Description</label>
+        <input
+          type="text"
+          name="taskText"
+          class="input"
+          ng-model="$ctrl.taskText" />
+      </fieldset>
+      <fieldset>
+        <input
+          type="submit"
+          name="submitTask"
+          value="Create Task"
+          class="button button--alpha button--full" />
+        <a
+          href="#"
+          class="link--alpha button--full link--center"
+          ng-click="$ctrl.createTaskVisible($event)">
+          Cancel</a>
+      </fieldset>
+    </form>
+  </footer>
+</section>
