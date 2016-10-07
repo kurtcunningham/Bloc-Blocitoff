@@ -20,15 +20,16 @@
       var taskRef = firebase.database().ref('tasks');
       var taskList = $firebaseArray(taskRef);
 
+      console.log(taskList);
 
       // Init Tasks
       vm.taskList = taskList;
       vm.date = new Date();
 
-
       // Create Task
       vm.createTask = function() {
         taskList.$add({
+          createdOn: vm.date.getTime(),
           text: vm.taskText,
           isTaskComplete: false
         })
@@ -54,7 +55,12 @@
       vm.createTaskVisible = function(event) {
         event.preventDefault();
         vm.isCreateTaskVisible = !vm.isCreateTaskVisible;
-      }
+      };
+
+      // Remove Task
+      vm.removeTask = function(task) {
+        taskList.$remove(task);
+      };
 
     }
   }
