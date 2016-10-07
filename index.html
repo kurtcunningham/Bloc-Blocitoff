@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head lang="en">
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blocitoff</title>
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="/styles/style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+  </head>
+  <body>
+    <main
+      role="main"
+      ui-view="main">
+        <!-- Load Content -->
+    </main>
+
+    <!-- Vendor Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+    <script>
+      var config = {
+        apiKey: "AIzaSyCmrecm2X2JzL0gk92-KL-KQDhAwCnrl38",
+        authDomain: "blocitoff-a18fc.firebaseapp.com",
+        databaseURL: "https://blocitoff-a18fc.firebaseio.com",
+        storageBucket: "blocitoff-a18fc.appspot.com",
+        messagingSenderId: "80891638944"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- Global -->
+    <script src="../scripts/app.module.js"></script>
+    <script src="../scripts/appRoute.config.js"></script>
+
+    <!-- Directives -->
+    <script src="../scripts/directives/taskList.directive.js"></script>
+
+  </body>
+</html>

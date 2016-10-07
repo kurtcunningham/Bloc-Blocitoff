@@ -1,0 +1,233 @@
+/* Application Style Sheet
+// ======================================== */
+
+body {
+  background-color: #F0EFE9;
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+
+/* Text Styles */
+
+li {
+  list-style: none;
+}
+
+
+/* Form Elements */
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+label {
+  color: #333333;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  border-radius: 2px;
+  border: 1px solid #EEF0F5;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  height: 35px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+
+/* Buttons */
+.button--alpha {
+  background-color: #50E3A4;
+  border: none;
+  border-radius: 2px;
+  color: #FFFFFF;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 5px 0 15px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.button--alpha:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.button--full {
+  display: block;
+  width: 100%;
+}
+
+.link--alpha {
+  color: #CCCCCC;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link--center {
+  text-align: center;
+}
+
+/* Tasks Container */
+.tasks__container {
+  background-color: #FFFFFF;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.25);
+  -moz-box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.25);
+  box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.25);
+  margin: 60px auto;
+  width: 450px;
+}
+
+
+/* Task Header */
+.tasks__header {
+  padding: 30px 60px;
+}
+
+.tasks__header-date {
+  color: #333;
+  font-size: 50px;
+  float: left;
+  margin: 0;
+}
+
+.tasks__header-date-list {
+  color: #333;
+  display: inline-block;
+  font-size: 12px;
+  margin: 12px 10px 5px;
+  padding: 0;
+}
+
+.tasks__header-date-item {
+  color: #333;
+  display: block;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.tasks__header-day {
+  color: #333;
+  float: right;
+  font-size: 15px;
+  margin: 30px 0 0;
+  text-transform: uppercase;
+}
+
+
+/* Task Body + List */
+.tasks__list {
+  padding: 0 60px;
+}
+
+.tasks__item {
+  color: #333;
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+.tasks__item-text {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
+  width: 90%;
+}
+
+.tasks__item-text.is-completed {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.tasks__item-icon {
+  background: url('../assets/images/checkbox.svg') no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  height: 18px;
+  position: relative;
+  top: 2px;
+  width: 18px;
+}
+
+.tasks__item-icon.is-completed {
+  background: url('../assets/images/checkbox-checked.svg') no-repeat center;
+}
+
+.tasks__item-icon:hover {
+  cursor: pointer;
+}
+
+.tasks__button {
+  background-color: #50E3A4;
+  border: none;
+  border-radius: 30em;
+  bottom: -50px;
+  -webkit-box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.45);
+  -moz-box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.45);
+  box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.45);
+  display: block;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 100px;
+}
+
+.tasks__button:hover {
+  -webkit-box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.25);
+  -moz-box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.25);
+  box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.25);
+  cursor: pointer;
+}
+
+.tasks__button:active {
+  outline: none;
+  -webkit-box-shadow: 0 0 1px 1px rgba(95, 95, 95, 0.25);
+  -moz-box-shadow: 0 0 1px 1px rgba(95, 95, 95, 0.25);
+  box-shadow: 0 0 1px 1px rgba(95, 95, 95, 0.25);
+}
+
+.tasks__button-text {
+  color: #46BE8B;
+  font-size: 60px;
+  position: relative;
+  top: -3px;
+}
+
+.tasks__form {
+  background-color: #FFF;
+  bottom: -50px;
+  -webkit-box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.15);
+  -moz-box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.15);
+  box-shadow: 0 0 20px 1px rgba(95, 95, 95, 0.15);
+  margin: 0 auto;
+  padding: 30px;
+  position: relative;
+  width: 75%;
+}
