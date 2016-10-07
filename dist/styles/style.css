@@ -150,12 +150,19 @@ input[type="text"]:focus {
   margin: 30px 0;
 }
 
+.tasks__create-date {
+  color: #CCCCCC;
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
 .tasks__item-text {
+  margin: 0;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
   display: inline-block;
-  width: 90%;
+  width: 85%;
 }
 
 .tasks__item-text.is-completed {
@@ -177,8 +184,20 @@ input[type="text"]:focus {
   background: url('../assets/images/checkbox-checked.svg') no-repeat center;
 }
 
-.tasks__item-icon:hover {
+.tasks__item-icon:hover,
+.tasks__item-icon-close:hover {
   cursor: pointer;
+}
+
+.tasks__item-icon-close {
+  background: url('../assets/images/close-icon.svg') no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  height: 18px;
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+  width: 18px;
 }
 
 .tasks__button {

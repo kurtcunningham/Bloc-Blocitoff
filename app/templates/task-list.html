@@ -15,6 +15,7 @@
         class="tasks__item"
         ng-if="$ctrl.taskList.length"
         ng-repeat="task in $ctrl.taskList">
+        <p class="tasks__create-date">Created On: {{task.createdOn | date:'MMM. d, y'}}</p>
         <p
           ng-class="{'is-completed': task.isTaskComplete === true}"
           class="tasks__item-text">{{task.text}}</p>
@@ -22,6 +23,10 @@
           class="tasks__item-icon"
           ng-class="{'is-completed': task.isTaskComplete === true}"
           ng-click="$ctrl.isTaskComplete(task)"></i>
+        <i
+          class="tasks__item-icon-close"
+          ng-click="$ctrl.removeTask(task)">
+        </i>
       </li>
       <li ng-if="!$ctrl.taskList.length">
         You have no tasks at the moment.
