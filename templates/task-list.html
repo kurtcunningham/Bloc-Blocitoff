@@ -13,6 +13,7 @@
     <ul class="tasks__list">
       <li
         class="tasks__item"
+        ng-if="$ctrl.taskList.length"
         ng-repeat="task in $ctrl.taskList">
         <p
           ng-class="{'is-completed': task.isTaskComplete === true}"
@@ -21,6 +22,9 @@
           class="tasks__item-icon"
           ng-class="{'is-completed': task.isTaskComplete === true}"
           ng-click="$ctrl.isTaskComplete(task)"></i>
+      </li>
+      <li ng-if="!$ctrl.taskList.length">
+        You have no tasks at the moment.
       </li>
     </ul>
   </div>
