@@ -8,7 +8,7 @@
       restrict: 'E',
       scope: {},
       bindToController: true,
-      templateUrl: '/templates/task-list.html',
+      templateUrl: 'templates/task-list.html',
       controllerAs: '$ctrl',
       controller: ['$firebaseArray', TaskListCtrl]
     };
